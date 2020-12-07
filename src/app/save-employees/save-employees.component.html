@@ -1,0 +1,37 @@
+<h1> Employees Registration </h1>
+
+<form>
+  <div class="form-group">
+    <label for="first"></label>
+    <input type="text" [(ngModel)]="employees.first_name" name="first_name" class="form-control" placeholder="Enter First Name" id="first">
+  </div>
+  <div class="form-group">
+    <label for="last"></label>
+    <input type="text" [(ngModel)]="employees.last_name" name="last_name" class="form-control" placeholder="Enter Last Name" id="last">
+  </div>
+  <div class="form-group">
+    <label for="date"></label>
+    <input type="date" [(ngModel)]="employees.dob" name="dob" class="form-control" id="date">
+  </div>
+  <div class="form-group">
+    <label for="manager"></label>
+    <input type="text" [(ngModel)]="employees.direct_manager" name="direct_manager" class="form-control" placeholder="Enter Direct Manager's Name" id="manager">
+  </div>
+  <div class="form-group">
+    <label for="salary"></label>
+    <input type="number" [(ngModel)]="employees.salary" name="salary" class="form-control" placeholder="Enter Salary Amount" id="salary">
+  </div>
+  <div class="form-group">
+    <label for="department"></label>
+    <input type="text" [(ngModel)]="employees.department" name="department" class="form-control" placeholder="Enter Department Name" id="department">
+  </div>
+
+
+
+  <button type="submit" class="btn-primary" (click)=getSaveEmployee() >Save</button>
+</form>
+
+
+<div style="text-align: center">
+  <h1> {{message}} </h1>
+</div>
