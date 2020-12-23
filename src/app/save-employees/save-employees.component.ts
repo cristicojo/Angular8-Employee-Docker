@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Employees} from "../employees";
-import {EmployeesServiceService} from "../employees-service.service";
+import {Employees} from '../employees';
+import {EmployeesServiceService} from '../employees-service.service';
 
 @Component({
   selector: 'app-save-employees',
@@ -15,7 +15,7 @@ export class SaveEmployeesComponent implements OnInit {
 
   empList: Array<Employees> = [];
 
-  message: string
+  message: string;
 
   constructor(private service: EmployeesServiceService) {
   }
@@ -28,11 +28,11 @@ export class SaveEmployeesComponent implements OnInit {
 
     this.empList = [];
 
-    this.empList.push(this.employees)
+    this.empList.push(this.employees);
 
-    let response = this.service.saveEmployee(this.empList);
+    const response = this.service.saveEmployee(this.empList);
 
-     response.subscribe(()=>this.message="SALVAT");
+    response.subscribe(() => this.message = 'SALVAT');
 
   }
 

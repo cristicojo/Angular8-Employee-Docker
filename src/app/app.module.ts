@@ -9,7 +9,7 @@ import { DeleteEmployeesComponent } from './delete-employees/delete-employees.co
 import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
 import { EmployeesServiceService } from './employees-service.service';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from "@angular/forms";
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
