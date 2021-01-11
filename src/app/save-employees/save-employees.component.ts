@@ -32,8 +32,7 @@ export class SaveEmployeesComponent implements OnInit {
 
     const response = this.service.saveEmployee(this.empList);
 
-    response.subscribe(() => this.message = 'SALVAT');
+    response.subscribe(() => this.message = 'Employee Saved Successfully !');
 
   }
-
 }
