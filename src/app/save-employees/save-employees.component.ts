@@ -12,11 +12,8 @@ import {EmployeesServiceService} from '../employees-service.service';
 export class SaveEmployeesComponent implements OnInit {
 
   employees: Employees = new Employees();
-
   empList: Array<Employees> = [];
-
   message: string;
-
   constructor(private service: EmployeesServiceService) {
   }
 
@@ -27,11 +24,8 @@ export class SaveEmployeesComponent implements OnInit {
   public getSaveEmployee() {
 
     this.empList = [];
-
     this.empList.push(this.employees);
-
     const response = this.service.saveEmployee(this.empList);
-
     response.subscribe(() => this.message = 'Employee Saved Successfully !');
 
   }
