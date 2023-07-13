@@ -27,6 +27,7 @@ export class SaveEmployeesComponent implements OnInit {
     this.empList.push(this.employees);
     const response = this.service.saveEmployee(this.empList);
     response.subscribe(() => this.message = 'Employee Saved Successfully !');
+    setTimeout(() => {this.message = ''; }, 3000);
 
   }
 }
