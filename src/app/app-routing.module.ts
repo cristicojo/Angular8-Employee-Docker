@@ -7,11 +7,11 @@ import {UpdateEmployeesComponent} from './update-employees/update-employees.comp
 
 
 const routes: Routes = [
-  {path: 'Delete', component: DeleteEmployeesComponent},
-  {path: 'Save', component: SaveEmployeesComponent},
-  {path: 'Search', component: SearchEmployeesComponent},
-  {path: 'Update', component: UpdateEmployeesComponent},
-  {path: '', redirectTo: 'Save', pathMatch: 'full'},
+  {path: 'delete', component: DeleteEmployeesComponent},
+  {path: 'save', component: SaveEmployeesComponent},
+  {path: 'search', component: SearchEmployeesComponent},
+  {path: 'update', component: UpdateEmployeesComponent},
+  {path: '', redirectTo: 'save', pathMatch: 'full'},
 ];
 
 @NgModule({
