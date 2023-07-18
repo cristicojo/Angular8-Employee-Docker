@@ -4,6 +4,7 @@ import {SaveEmployeesComponent} from './save-employees/save-employees.component'
 import {DeleteEmployeesComponent} from './delete-employees/delete-employees.component';
 import {SearchEmployeesComponent} from './search-employees/search-employees.component';
 import {UpdateEmployeesComponent} from './update-employees/update-employees.component';
+import {EmployeeListComponent} from "./employee-list/employee-list.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'save', component: SaveEmployeesComponent},
   {path: 'search', component: SearchEmployeesComponent},
   {path: 'update', component: UpdateEmployeesComponent},
+  {path: 'employee-list', component: EmployeeListComponent},
   {path: '', redirectTo: 'save', pathMatch: 'full'},
 ];
 

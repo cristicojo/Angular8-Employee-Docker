@@ -3,30 +3,30 @@
 <form>
   <div class="form-group">
     <label for="first"></label>
-    <input type="text" [(ngModel)]="employees.firstName" name="first_name" class="form-control" placeholder="Enter First Name" id="first">
+    <input type="text" [(ngModel)]="employee.firstName" name="first_name" class="form-control" placeholder="Enter First Name" id="first">
   </div>
   <div class="form-group">
     <label for="last"></label>
-    <input type="text" [(ngModel)]="employees.lastName" name="last_name" class="form-control" placeholder="Enter Last Name" id="last">
+    <input type="text" [(ngModel)]="employee.lastName" name="last_name" class="form-control" placeholder="Enter Last Name" id="last">
   </div>
   <div class="form-group">
     <label for="date"></label>
-    <input type="date" [(ngModel)]="employees.dob" name="dob" class="form-control" id="date">
+    <input type="date" [(ngModel)]="employee.dob" name="dob" class="form-control" id="date">
   </div>
   <div class="form-group">
     <label for="manager"></label>
-    <input type="text" [(ngModel)]="employees.directManager" name="direct_manager" class="form-control" placeholder="Enter Direct Manager's Name" id="manager">
+    <input type="text" [(ngModel)]="employee.directManager" name="direct_manager" class="form-control" placeholder="Enter Direct Manager's Name" id="manager">
   </div>
   <div class="form-group">
     <label for="salary"></label>
-    <input type="number" [(ngModel)]="employees.salary" name="salary" class="form-control" placeholder="Enter Salary Amount" id="salary">
+    <input type="number" [(ngModel)]="employee.salary" name="salary" class="form-control" placeholder="Enter Salary Amount" id="salary">
   </div>
   <div class="form-group">
     <label for="department"></label>
-    <input type="text" [(ngModel)]="employees.department" name="department" class="form-control" placeholder="Enter Department Name" id="department">
+    <input type="text" [(ngModel)]="employee.department" name="department" class="form-control" placeholder="Enter Department Name" id="department">
   </div>
 
-  <button type="submit" class="btn-primary" (click)=getSaveEmployee() >Save</button>
+  <button type="submit" class="btn-primary" (click)=getSavedEmployee() >Save</button>
 </form>
 
 

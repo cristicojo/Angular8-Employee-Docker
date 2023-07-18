@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Employees} from '../employees';
-import {EmployeesServiceService} from '../employees-service.service';
+import {Employee} from '../dto/employee';
+import {EmployeeService} from '../service/employee.service';
 
 @Component({
   selector: 'app-save-employees',
@@ -11,21 +11,17 @@ import {EmployeesServiceService} from '../employees-service.service';
 
 export class SaveEmployeesComponent implements OnInit {
 
-  employees: Employees = new Employees();
-  empList: Array<Employees> = [];
+  employee: Employee = new Employee();
   message: string;
-  constructor(private service: EmployeesServiceService) {
+  constructor(private service: EmployeeService) {
   }
 
   ngOnInit() {
   }
 
 
-  public getSaveEmployee() {
-
-    this.empList = [];
-    this.empList.push(this.employees);
-    const response = this.service.saveEmployee(this.empList);
+  public getSavedEmployee() {
+    const response = this.service.saveEmployee(this.employee);
     response.subscribe(() => this.message = 'Employee Saved Successfully !');
     setTimeout(() => {this.message = ''; }, 3000);
 

@@ -7,9 +7,10 @@ import { SaveEmployeesComponent } from './save-employees/save-employees.componen
 import { SearchEmployeesComponent } from './search-employees/search-employees.component';
 import { DeleteEmployeesComponent } from './delete-employees/delete-employees.component';
 import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
-import { EmployeesServiceService } from './employees-service.service';
+import { EmployeeService } from './service/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {FormsModule} from '@angular/forms';
     SearchEmployeesComponent,
     DeleteEmployeesComponent,
     UpdateEmployeesComponent,
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [EmployeesServiceService],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
