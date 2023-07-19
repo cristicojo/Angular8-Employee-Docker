@@ -13,8 +13,7 @@ export class EmployeeService {
 
 
   public saveEmployee(employee: Employee)  {
-    return this.httpClient.post(environment.API_BASE_URL + "/employee", employee,
-      {responseType: 'text' as 'json'});
+    return this.httpClient.post(environment.API_BASE_URL + "/employee", employee);
   }
 
   public updateEmployee(employee: Employee, id: number)  {

@@ -23,7 +23,7 @@ export class SaveEmployeesComponent implements OnInit {
   public getSavedEmployee() {
     const response = this.service.saveEmployee(this.employee);
     response.subscribe(() => this.message = 'Employee Saved Successfully !');
-    setTimeout(() => {this.message = ''; }, 3000);
+    setTimeout(() => {this.message = ''; }, 2000);
 
   }
 }
