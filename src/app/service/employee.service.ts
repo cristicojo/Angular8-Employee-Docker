@@ -17,8 +17,7 @@ export class EmployeeService {
   }
 
   public updateEmployee(employee: Employee, id: number)  {
-    return this.httpClient.put(environment.API_BASE_URL + "/employee/id", employee,
-      {responseType: 'text' as 'json'});
+    return this.httpClient.put(environment.API_BASE_URL + "/employee/id", employee);
   }
 
   public getEmployeeList()  {
@@ -26,17 +25,14 @@ export class EmployeeService {
   }
 
   public getEmployee(id: number)  {
-    return this.httpClient.get(environment.API_BASE_URL + "/employee/id",
-      {responseType: 'text' as 'json'});
+    return this.httpClient.get(environment.API_BASE_URL + "/employee/id");
   }
 
   public deleteEmployee(id: number)  {
-    return this.httpClient.delete(environment.API_BASE_URL + "/employee/id",
-      {responseType: 'text' as 'json'});
+    return this.httpClient.delete(environment.API_BASE_URL + "/employee/id");
   }
 
   public deleteEmployeeList()  {
-    return this.httpClient.delete(environment.API_BASE_URL + "/all",
-      {responseType: 'text' as 'json'});
+    return this.httpClient.delete(environment.API_BASE_URL + "/all");
   }
 }
