@@ -22,7 +22,9 @@ export class GetAllComponent implements OnInit {
         console.log(response);
         const datePipe = new DatePipe("en-US");
         response.forEach((employee: any) => {
-          employee.dob = datePipe.transform(employee.dob, 'dd.MM.yyyy HH:mm');
+          if (employee.dob != null) {
+            employee.dob = datePipe.transform(employee.dob, 'dd.MM.yyyy HH:mm');
+          }
         });
         this.employeeList = response;
         console.log(this.employeeList);
