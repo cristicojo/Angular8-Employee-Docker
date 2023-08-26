@@ -1,8 +1,12 @@
 <div class="container-fluid">
+  <input type="search" [(ngModel)]="searchByFirstName" class="form-control-1" placeholder="Search by first name">
+  <input type="search" [(ngModel)]="searchByDepartment" class="form-control-2" placeholder="Search by department">
+  <input type="search" [(ngModel)]="searchByDateOfBirth" class="form-control-3" placeholder="Search by date of birth">
+  <input type="search" [(ngModel)]="searchBySalary" class="form-control-4" placeholder="Search by salary">
   <table class="table table-bordered">
     <thead class="thead-light">
     <tr>
-      <th>#</th>
+      <th>Id</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Date of Birth</th>
@@ -13,7 +17,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let e of employeeList">
+    <tr *ngFor="let e of employeeList | firstNameFilter: searchByFirstName | departmentFilter: searchByDepartment
+    | dateOfBirthFilter: searchByDateOfBirth | salaryFilter: searchBySalary">
       <td>{{e.id}}</td>
       <td>{{e.firstName}}</td>
       <td>{{e.lastName}}</td>
@@ -23,7 +28,7 @@
       <td>{{e.department}}</td>
       <td>
         <button class="btn btn-warning" style="margin-right: 10px" (click)="update(e.id)">Edit</button>
-        <button class="btn btn-danger" style="margin-right: 10px">Delete</button>
+        <button class="btn btn-danger" style="margin-right: 10px" (click)="delete(e.id)">Delete</button>
       </td>
     </tr>
     </tbody>

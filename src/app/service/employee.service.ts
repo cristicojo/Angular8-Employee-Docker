@@ -28,7 +28,7 @@ export class EmployeeService {
     return this.httpClient.get(environment.API_BASE_URL + "/employee/" + id);
   }
 
-  public delete(id: number)  {
+  public delete(id: string)  {
     return this.httpClient.delete(environment.API_BASE_URL + "/employee/" + id);
   }
 

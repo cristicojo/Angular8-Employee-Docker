@@ -12,6 +12,10 @@ import {DatePipe} from "@angular/common";
 export class GetAllComponent implements OnInit {
 
   employeeList: EmployeeDto[];
+  searchByFirstName: string = "";
+  searchByDepartment: string = "";
+  searchByDateOfBirth: string = "";
+  searchBySalary: string = "";
 
   constructor(private employeeService: EmployeeService, private router: Router) {
   }
@@ -19,7 +23,6 @@ export class GetAllComponent implements OnInit {
   ngOnInit() {
     this.employeeService.getAll()
       .subscribe((response: any) => {
-        console.log(response);
         const datePipe = new DatePipe("en-US");
         response.forEach((employee: any) => {
           if (employee.dob != null) {
@@ -36,4 +39,11 @@ export class GetAllComponent implements OnInit {
     this.router.navigate(['/update', id]);
   };
 
+  delete(id: string) {
+    this.employeeService.delete(id).subscribe(() => {
+      this.employeeList = this.employeeList.filter((employee: EmployeeDto) => {
+        return id != employee.id;
+      });
+    });
+  }
 }
