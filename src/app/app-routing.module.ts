@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {SaveEmployeesComponent} from './save-employees/save-employees.component';
-import {DeleteEmployeesComponent} from './delete-employees/delete-employees.component';
-import {SearchEmployeesComponent} from './search-employees/search-employees.component';
-import {UpdateEmployeesComponent} from './update-employees/update-employees.component';
-import {EmployeeListComponent} from "./employee-list/employee-list.component";
+import {SaveComponent} from './view/save/save-component';
+import {DeleteComponent} from './view/delete/delete-component';
+import {SearchComponent} from './view/search/search-component';
+import {UpdateComponent} from './view/update/update-component';
+import {GetAllComponent} from "./view/get/getAll.component";
 
 
 const routes: Routes = [
-  {path: 'delete', component: DeleteEmployeesComponent},
-  {path: 'save', component: SaveEmployeesComponent},
-  {path: 'search', component: SearchEmployeesComponent},
-  {path: 'update', component: UpdateEmployeesComponent},
-  {path: 'employee-list', component: EmployeeListComponent},
+  {path: 'delete', component: DeleteComponent},
+  {path: 'save', component: SaveComponent},
+  {path: 'search', component: SearchComponent},
+  {path: 'update/:id', component: UpdateComponent},
+  {path: 'employee-list', component: GetAllComponent},
   {path: '', redirectTo: 'save', pathMatch: 'full'},
 ];
 

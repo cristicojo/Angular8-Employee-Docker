@@ -1,7 +1,8 @@
-export class Employee {
+export class EmployeeDto {
+  id: string;
   firstName: string;
   lastName: string;
-  dob: Date;
+  dob: string;
   directManager: string;
   salary: number;
   department: string;

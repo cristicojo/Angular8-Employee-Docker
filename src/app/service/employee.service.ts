@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Employee} from "../dto/employee";
+import {EmployeeDto} from "../dto/employee.dto";
 import {environment} from "../../environments/environment";
 
 @Injectable({
@@ -12,27 +12,27 @@ export class EmployeeService {
   }
 
 
-  public saveEmployee(employee: Employee)  {
-    return this.httpClient.post(environment.API_BASE_URL + "/employee", employee);
+  public save(employee: EmployeeDto)  {
+    return this.httpClient.post(environment.API_BASE_URL + "/create", employee);
   }
 
-  public updateEmployee(employee: Employee, id: number)  {
-    return this.httpClient.put(environment.API_BASE_URL + "/employee/id", employee);
+  public update(employee: EmployeeDto)  {
+    return this.httpClient.post(environment.API_BASE_URL + "/create", employee);
   }
 
-  public getEmployeeList()  {
-    return this.httpClient.get(environment.API_BASE_URL + "/all");
+  public getAll()  {
+    return this.httpClient.get(environment.API_BASE_URL + "/find/all");
   }
 
-  public getEmployee(id: number)  {
-    return this.httpClient.get(environment.API_BASE_URL + "/employee/id");
+  public get(id: string)  {
+    return this.httpClient.get(environment.API_BASE_URL + "/employee/" + id);
   }
 
-  public deleteEmployee(id: number)  {
-    return this.httpClient.delete(environment.API_BASE_URL + "/employee/id");
+  public delete(id: number)  {
+    return this.httpClient.delete(environment.API_BASE_URL + "/employee/" + id);
   }
 
-  public deleteEmployeeList()  {
+  public deleteAll()  {
     return this.httpClient.delete(environment.API_BASE_URL + "/all");
   }
 }

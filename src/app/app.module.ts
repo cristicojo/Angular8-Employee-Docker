@@ -3,31 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SaveEmployeesComponent } from './save-employees/save-employees.component';
-import { SearchEmployeesComponent } from './search-employees/search-employees.component';
-import { DeleteEmployeesComponent } from './delete-employees/delete-employees.component';
-import { UpdateEmployeesComponent } from './update-employees/update-employees.component';
+import { SaveComponent } from './view/save/save-component';
+import { SearchComponent } from './view/search/search-component';
+import { DeleteComponent } from './view/delete/delete-component';
+import { UpdateComponent } from './view/update/update-component';
 import { EmployeeService } from './service/employee.service';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { GetAllComponent } from './view/get/getAll.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SaveEmployeesComponent,
-    SearchEmployeesComponent,
-    DeleteEmployeesComponent,
-    UpdateEmployeesComponent,
-    EmployeeListComponent,
+    SaveComponent,
+    SearchComponent,
+    DeleteComponent,
+    UpdateComponent,
+    GetAllComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
 })

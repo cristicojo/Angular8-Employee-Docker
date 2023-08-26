@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Angular8-Employee-Docker app is running!');
+    expect(page.getTitleText()).toEqual('Angular8-EmployeeDto-Docker app is running!');
   });
 
   afterEach(async () => {
