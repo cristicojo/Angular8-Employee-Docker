@@ -14,6 +14,7 @@ import { FirstNameFilterPipe } from './view/search/firstName-filter.pipe';
 import { DepartmentFilterPipe } from './view/search/department-filter.pipe';
 import { DateOfBirthFilterPipe } from './view/search/date-of-birth-filter.pipe';
 import { SalaryFilterPipe } from './view/search/salary-filter.pipe';
+import { HomeComponent } from './view/home/home.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { SalaryFilterPipe } from './view/search/salary-filter.pipe';
     DepartmentFilterPipe,
     DateOfBirthFilterPipe,
     SalaryFilterPipe,
+    HomeComponent,
   ],
     imports: [
         BrowserModule,

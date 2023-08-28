@@ -4,6 +4,7 @@ import {SaveComponent} from './view/save/save-component';
 import {DeleteComponent} from './view/delete/delete-component';
 import {UpdateComponent} from './view/update/update-component';
 import {GetAllComponent} from "./view/get/getAll.component";
+import {HomeComponent} from "./view/home/home.component";
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'save', component: SaveComponent},
   {path: 'update/:id', component: UpdateComponent},
   {path: 'employee-list', component: GetAllComponent},
-  {path: '', redirectTo: 'save', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({
