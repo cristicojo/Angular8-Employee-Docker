@@ -33,6 +33,6 @@ export class EmployeeService {
   }
 
   public deleteAll()  {
-    return this.httpClient.delete(environment.API_BASE_URL + "/all");
+    return this.httpClient.delete(environment.API_BASE_URL + "/remove/all");
   }
 }

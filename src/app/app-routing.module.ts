@@ -7,7 +7,7 @@ import {GetAllComponent} from "./view/get/getAll.component";
 
 
 const routes: Routes = [
-  {path: 'delete', component: DeleteComponent},
+  {path: 'delete-all', component: DeleteComponent},
   {path: 'save', component: SaveComponent},
   {path: 'update/:id', component: UpdateComponent},
   {path: 'employee-list', component: GetAllComponent},
